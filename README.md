@@ -2,7 +2,7 @@
 
 An ongoing research project that benchmarks multiple machine learning models for stock price prediction. Models are evaluated side-by-side on the same data using walk-forward validation, so results reflect real-world performance across different market conditions rather than a single lucky test split.
 
-> **Status: Active development.** New features, models, and experiments are added regularly.
+> **Status: Active development. Still in Progress** 
 
 ---
 
