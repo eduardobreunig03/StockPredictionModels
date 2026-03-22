@@ -11,9 +11,9 @@ An ongoing research project that benchmarks multiple machine learning models for
 Given a stock ticker and date range, the pipeline:
 
 1. Downloads historical OHLCV data from Yahoo Finance
-2. Computes technical indicators — RSI, MACD, Bollinger Bands
-3. Builds sliding-window sequences (90-day lookback by default)
-4. Evaluates models using **walk-forward validation** — the training window expands fold by fold, and the test window slides forward, mimicking how a model would actually be used over time
+2. Computes technical indicators: RSI, MACD, Bollinger Bands
+3. Builds sliding window sequences (90-day lookback by default)
+4. Evaluates models using **walk-forward validation**: the training window expands fold by fold, and the test window slides forward, mimicking how a model would actually be used over time
 5. Reports MSE, MAE, R², and MAPE per fold and exports results to CSV
 
 ### Models included
@@ -24,7 +24,7 @@ Given a stock ticker and date range, the pipeline:
 | **LSTM** | Recurrent neural net | Captures long-range temporal dependencies |
 | **CNN** | Convolutional neural net | Detects local price patterns |
 | **Transformer** | Attention-based | State-of-the-art sequence modelling |
-| **ARIMA** | Classical statistical | Baseline; uses auto parameter selection |
+| **ARIMA** | Classical statistical | Baseline uses auto parameter selection |
 
 ---
 
@@ -39,12 +39,12 @@ stock-prediction-models-comparison-main/
 │
 ├── src/
 │   ├── features.py            # RSI, MACD, Bollinger Bands
-│   ├── preprocess.py          # Walk-forward splits + sliding-window sequencing
+│   ├── preprocess.py          # Walk forward splits + sliding window sequencing
 │   ├── evaluate.py            # Loads trained models, computes metrics, exports CSV
 │   ├── train.py               # Orchestrates multi-model training with repeat runs
 │   ├── save_data.py           # Saves raw and processed data to disk
 │   ├── load_data.py           # Loads data from local CSV
-│   ├── predict.py             # Next-day price prediction from saved models
+│   ├── predict.py             # Next day price prediction from saved models
 │   └── models/
 │       ├── lstm_model.py
 │       ├── cnn_model.py
